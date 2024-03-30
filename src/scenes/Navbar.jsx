@@ -23,7 +23,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const navbarBackground = isTopOfPage ? "" : "bg-blue";
 
   return (
-    <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
+    <nav className={`${navbarBackground} z-40 w-screen fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
         <h4 className="font-pacifico text-4xl font-bold">mll</h4>
 
@@ -102,6 +102,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   /> */}
+              <Link
+                page="About"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
               <Link
                 page="Contact"
                 selectedPage={selectedPage}
