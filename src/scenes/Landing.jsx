@@ -12,6 +12,7 @@ const Landing = ({ setSelectedPage }) => {
   const sentence2 = "Laureles".split("");
 
   const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
+  const isAboveMediumMediumScreen = useMediaQuery("(min-width: 1108px)");
 
   return (
     <section
@@ -59,7 +60,7 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          {isAboveMediumScreen ? (
+          {isAboveMediumMediumScreen ? (
             <p className="text-5xl font-oooh_baby z-10 text-center md:text-start">
               {sentence1.map((letter, index) => {
                 return (
@@ -82,38 +83,69 @@ const Landing = ({ setSelectedPage }) => {
               </span>
             </p>
           ) : (
-            <p className="p-5 text-4xl font-oooh_baby z-10 text-center md:text-start">
-              {sentence1.map((letter, index) => {
-                return (
-                  <TextSpan key={index}>
-                    {letter === " " ? "\u00A0" : letter}
-                  </TextSpan>
-                );
-              })}
-              <span
-                className="md:relative md:text-deep-blue md:font-semibold z-20 md:before:content-brush  
-                            before:absolute before:-left-[35px] before:-top-[140px] before:z-[-1]"
-              >
-                {sentence2.map((letter, index) => {
+            isAboveMediumScreen ? (
+              <p className="text-4xl font-oooh_baby z-10 text-center md:text-start">
+                {sentence1.map((letter, index) => {
                   return (
                     <TextSpan key={index}>
                       {letter === " " ? "\u00A0" : letter}
                     </TextSpan>
                   );
                 })}
-              </span>
-            </p>
+                <span
+                  className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush_2 
+                              before:absolute before:-left-[34px] before:-top-[125px] before:z-[-1] "
+                >
+                  {sentence2.map((letter, index) => {
+                    return (
+                      <TextSpan key={index}>
+                        {letter === " " ? "\u00A0" : letter}
+                      </TextSpan>
+                    );
+                  })}
+                </span>
+              </p>
+            ) : (
+              <p className="p-5 text-4xl font-oooh_baby z-10 text-center md:text-start">
+                {sentence1.map((letter, index) => {
+                  return (
+                    <TextSpan key={index}>
+                      {letter === " " ? "\u00A0" : letter}
+                    </TextSpan>
+                  );
+                })}
+                <span
+                  className="md:relative md:text-deep-blue md:font-semibold z-20 md:before:content-brush  
+                              before:absolute before:-left-[35px] before:-top-[140px] before:z-[-1]"
+                >
+                  {sentence2.map((letter, index) => {
+                    return (
+                      <TextSpan key={index}>
+                        {letter === " " ? "\u00A0" : letter}
+                      </TextSpan>
+                    );
+                  })}
+                </span>
+              </p>
+            )
           )}
-          {isAboveMediumScreen ? (
+          {isAboveMediumMediumScreen ? (
             <p className="mt-20 mb-7 text-xl text-center md:text-start">
               I'm Louie, a Web Developer based in Philippines! I like to explore
               new technologies and try out new things!
             </p>
           ) : (
-            <p className="mt-0 mb-7 text-xl text-center md:text-start">
-              I'm Louie, a Web Developer based in Philippines! I like to explore
-              new technologies and try out new things!
-            </p>
+            isAboveMediumScreen ? (
+              <p className="mt-16 mb-7 text-xl text-center md:text-start">
+                I'm Louie, a Web Developer based in Philippines! I like to explore
+                new technologies and try out new things!
+              </p>
+            ) : (
+              <p className="mt-0 mb-7 text-xl text-center md:text-start">
+                I'm Louie, a Web Developer based in Philippines! I like to explore
+                new technologies and try out new things!
+              </p>
+            )
           )}
         </motion.div>
 

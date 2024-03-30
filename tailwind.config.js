@@ -32,12 +32,14 @@ module.exports = {
       },
       content: {
         brush: "url('/public/assets/brush.png')",
+        brush_2: "url('/public/assets/brush_2.png')",
         person1: "url('/public/assets/person-1.png')",
         person2: "url('/public/assets/person-2.png')",
         person3: "url('/public/assets/person-3.png')",
       },
     },
     screens: {
+      xxs: "380px",
       xs: "480px",
       ss: "620px",
       sm: "768px",
