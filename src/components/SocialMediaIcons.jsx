@@ -9,7 +9,7 @@ const SocialMediaIcons = () => {
         <div className="flex justify-center md:justify-start my-10 gap-7">
           <a
             className="hover:opacity-50 transition duration-500"
-            href="https://www.linkedin.com/in/mark-louie-laureles-29a452234/"
+            href="https://www.linkedin.com/in/mark-louie-laureles/"
             target="_blank"
             rel="noreferrer"
           >
@@ -60,7 +60,7 @@ const SocialMediaIcons = () => {
         <div className="flex justify-center md:justify-start my-10 gap-7">
           <a
             className="hover:opacity-50 transition duration-500 w-[25px] h-[25px]"
-            href="https://www.linkedin.com/in/mark-louie-laureles-29a452234/"
+            href="https://www.linkedin.com/in/mark-louie-laureles/"
             target="_blank"
             rel="noreferrer"
           >
