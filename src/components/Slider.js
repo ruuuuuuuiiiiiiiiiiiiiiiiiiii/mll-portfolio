@@ -11,7 +11,6 @@ const Slider = () => {
     const carousel = useRef();
 
     useEffect(() => {
-        // console.log(carousel.current.scrollWidth, carousel.current.offsetWidth);
         setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
     })
 
@@ -27,21 +26,23 @@ const Slider = () => {
         >
             {technologyImages.map((technologyImage) => {
                 return(
-                    <motion.div className="item" key={technologyImage}>
-                        <img src={technologyImage} alt="" />
-                    </motion.div>
-                    
-                );
-            })}
-            {/* {technologyImages.map((technologyImage) => {
-                return(
-                    <motion.div className="item" key={technologyImage}>
-                        <img src={technologyImage} alt="" />
+                    <motion.div className="item" key={technologyImage.imgData}>
+                        <img src={technologyImage.imgData} alt={technologyImage.altName} />
+                        <span className="imgToolTilText">{technologyImage.altName}</span>
                     </motion.div>
                     
                 );
             })}
             {technologyImages.map((technologyImage) => {
+                return(
+                    <motion.div className="item" key={technologyImage.imgData}>
+                        <img classname="itemImage" src={technologyImage.imgData} alt={technologyImage.altName} />
+                        <span className="imgToolTilText">{technologyImage.altName}</span>
+                    </motion.div>
+                    
+                );
+            })}
+            {/* {technologyImages.map((technologyImage) => {
                 return(
                     <motion.div className="item" key={technologyImage}>
                         <img src={technologyImage} alt="" />

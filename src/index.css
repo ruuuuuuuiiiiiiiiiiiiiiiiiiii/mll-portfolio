@@ -239,18 +239,19 @@ span {
 }
 
 .item:hover {
-  filter: drop-shadow(0 0 13px rgba(228, 227, 182, 2));
+  /* filter: drop-shadow(0px 50px 10px rgba(228, 227, 182, 2)); */
   opacity: 1;
-  scale: 110%;
+  scale: 105%;
 }
 
 .technology-container {
   width: 100%;
   max-width: 100%;
-  height: 100px;
+  height: 120px;
   opacity: 1;
   overflow: hidden;
   position: relative;
+  padding-top: 20px;
 }
 
 .technology-container::before {
@@ -297,21 +298,57 @@ span {
   position: absolute;
   left: 0;
   width: 100%;
-  animation: marquee1 20s linear infinite;
+  animation: marquee1 30s linear infinite;
   /* animation: marquee2 30s linear infinite; */
 }
 .inner-carousel:hover {
   animation-play-state: paused;
 }
 
-/* @keyframes marquee1 {
+.imgToolTilText {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  color: #fff;
+  background: linear-gradient(135deg, rgba(44, 188, 233, 0.4), rgba(44, 188, 233, 0.2));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 0.1px solid rgba(255, 255, 255, 0);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  font-size: smaller;
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 7px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.imgToolTilText::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  border: 5px solid;
+  border-color: rgba(44, 188, 233, 0.2) #0000 #0000 #0000;
+}
+
+.item:hover .imgToolTilText {
+  top: -10%;
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes marquee1 {
   from {
-    left: 0;
+    transform: translateX(0);
   }
   to {
-    left: -136.8%;
+    transform: translateX(calc(-100px * 24));
   }
-} */
+}
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
