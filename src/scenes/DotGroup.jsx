@@ -11,7 +11,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
         className={`${
           selectedPage === "home" ? selectedStyles : "bg-dark-grey"
         } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("home")}
+        // onClick={() => setSelectedPage("home")} // fixes issue on DOT group
       />
       {/* <AnchorLink
             href="#skills"
@@ -25,14 +25,14 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
         className={`${
           selectedPage === "projects" ? selectedStyles : "bg-dark-grey"
         } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("projects")}
+        // onClick={() => setSelectedPage("projects")} // fixes issue on DOT group
       />
       <AnchorLink
         href="#about"
         className={`${
           selectedPage === "about" ? selectedStyles : "bg-dark-grey"
         } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("about")}
+        // onClick={() => setSelectedPage("about")} // fixes issue on DOT group
       />
       {/* <AnchorLink
             href="#testimonials"
@@ -46,7 +46,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
         className={`${
           selectedPage === "contact" ? selectedStyles : "bg-dark-grey"
         } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("contact")}
+        // onClick={() => setSelectedPage("contact")} // fixes issue on DOT group
       />
     </div>
   );
