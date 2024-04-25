@@ -4,6 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --blue: 44, 188, 233;  /* #2CBCE9 */
+  --red: 220, 68, 146; /* #DC4492 */
+  --yellow: 253, 204, 73; /* #FDCC49 */
+  /*  */
+}
+
 html,
 body,
 #root,
