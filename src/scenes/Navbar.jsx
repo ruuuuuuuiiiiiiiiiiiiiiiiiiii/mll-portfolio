@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
+import DarkIcon from "../images/mode/icons8-summer-100.png";
+import LightIcon from "../images/mode/icons8-moon-and-stars-100.png";
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
@@ -18,6 +20,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 };
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
+  const [isDarkMode, setIsDarkMode] = useState(false)
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
   const navbarBackground = isTopOfPage ? "" : "bg-blue";
@@ -60,6 +63,17 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
+            {/* DRK/LGHT Mode */}
+            {/* <div className="vl-item"></div> */}
+            {/* DRK/LGHT Icon */}
+            {/* <div className="flex justify-center -ml-10">
+              <button 
+                onClick={() => setIsDarkMode(!isDarkMode)}
+                className="transition duration-1000"
+              >
+                <img className="h-[25px] w-[25px]" alt={isDarkMode ? "dark-icon" : "light-icon"} src={isDarkMode ? DarkIcon : LightIcon} />
+              </button>
+            </div> */}
           </div>
         ) : (
           <button
@@ -113,6 +127,17 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                 setSelectedPage={setSelectedPage}
               />
             </div>
+            {/* DRK/LGHT Mode */}
+            {/* <div className="hl-item"></div> */}
+            {/* DRK/LGHT Icon */}
+            {/* <div className="flex justify-center mb-[20px] mr-10">
+              <button 
+                onClick={() => setIsDarkMode(!isDarkMode)}
+                className="transition duration-1000"
+              >
+                <img className="h-[25px] w-[25px]" alt={isDarkMode ? "dark-icon" : "light-icon"} src={isDarkMode ? DarkIcon : LightIcon} />
+              </button>
+            </div> */}
           </div>
         )}
       </div>
