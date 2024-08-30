@@ -8,6 +8,7 @@
   --blue: 44, 188, 233;  /* #2CBCE9 */
   --red: 220, 68, 146; /* #DC4492 */
   --yellow: 253, 204, 73; /* #FDCC49 */
+  --light: 228, 228, 229; /* #E4E4E5 */
   /*  */
 }
 
@@ -22,6 +23,22 @@ body,
 
 span {
   display: inline-block;
+}
+
+.hl-item {
+  border-top: 3px solid #DEDDCD;
+  margin-top: 20px;
+  margin-right: 38%;
+  margin-left: 25%;
+  height: 20px;
+  position: center;
+}
+
+.vl-item {
+  border-left: 3px solid #919198;
+  height: 32px;
+  position: center;
+  margin-left: -30px;
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -296,6 +313,15 @@ span {
   height: auto;
 }
 
+@keyframes innerCarouselMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100px * 26));
+  }
+}
+
 .inner-carousel {
   /* display: flex;
   justify-content: space-between;
@@ -305,7 +331,7 @@ span {
   position: absolute;
   left: 0;
   width: 100%;
-  animation: marquee1 30s linear infinite;
+  animation: innerCarouselMarquee 30s linear infinite;
   /* animation: marquee2 30s linear infinite; */
 }
 .inner-carousel:hover {
@@ -348,14 +374,6 @@ span {
   opacity: 1;
 }
 
-@keyframes marquee1 {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-100px * 24));
-  }
-}
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
