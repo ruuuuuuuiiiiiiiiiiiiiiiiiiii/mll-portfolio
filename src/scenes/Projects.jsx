@@ -1,6 +1,9 @@
 import LineGradient from "../components/LineGradient";
 import TextSpan from "../components/TextSpan";
 import { motion } from "framer-motion";
+import portfolio from "../images/project/mll-portfolio.png";
+import ProjectSlider from "../components/ProjectSliderEffect/ProjectSlider";
+import ProjectSliderv2 from "../components/ProjectSliderEffect/ProjectSliderv2";
 
 const container = {
   hidden: {},
@@ -40,7 +43,7 @@ const Projects = () => {
   const sentence2 = "JECTS".split("");
 
   return (
-    <section id="projects" className="pt-48 pb-48">
+    <section id="projects" className="pt-28 pb-28">
       {/* Headings */}
       <motion.div
         className="md:w-2/5 mx-auto text-center"
@@ -76,39 +79,45 @@ const Projects = () => {
             <LineGradient width="w-2/3" />
           </div>
         </div>
-        <p className="mt-10 mb-10">HERE ARE SOME OF MY WORKS</p>
+        <p className="mt-5 mb-7">HERE ARE SOME OF MY WORKS</p>
       </motion.div>
 
       {/* Projects */}
-      <div className="flex justify-center">
-        <motion.div
+      {/* <div className="flex justify-center"> */}
+        {/* <motion.div
           className="sm:grid sm:grid-cols-3"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={container}
-        >
+        > */}
           {/* Row 1 */}
-          <div className="flex justify-center text-center items-center p-10 bg-red max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
+          {/* <div className="flex justify-center text-center items-center p-10 bg-red max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
             Beautiful User Interfaces
           </div>
           <Project title="Project 1" />
-          <Project title="Project 2" />
+          <Project title="Project 2" /> */}
 
           {/* Row 2 */}
-          <Project title="Project 3" />
+          {/* <Project title="Project 3" />
           <Project title="Project 4" />
-          <Project title="Project 5" />
+          <Project title="Project 5" /> */}
 
           {/* Row 3 */}
-          <Project title="Project 6" />
+          {/* <Project title="Project 6" />
           <Project title="Project 7" />
 
           <div className="flex justify-center text-center items-center p-10 bg-blue max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
             Smooth User Experience
           </div>
-        </motion.div>
-      </div>
+        </motion.div> */}
+
+        {/* Projects v2 SLIDER*/}
+
+        <ProjectSlider />
+        {/* <ProjectSliderv2 /> */}
+
+      {/* </div> */}
     </section>
   );
 };

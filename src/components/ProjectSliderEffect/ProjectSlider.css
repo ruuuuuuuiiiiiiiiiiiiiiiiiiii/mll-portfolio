@@ -1,0 +1,184 @@
+/* Project Slider v1 */
+
+.project {
+
+}
+
+.projectSlider {
+    height: 75vh;
+    margin-top: -30px;
+    position: relative;
+  }
+  
+  .projectSlider .projectSliderList .projectSliderItem {
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .projectSlider .projectSliderList .projectSliderItem .projectSliderImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .projectSlider .projectSliderList .projectSliderItem::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient( to top, #000 20%, transparent);
+  }
+  
+  .projectSlider .projectSliderList .projectSliderItem .projectSliderContent {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 500px;
+    max-width: 80%;
+    z-index: 1;
+  }
+  
+  .projectSlider .projectSliderList .projectSliderItem .projectSliderContent p:nth-child(1) {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+  }
+  
+  .projectSlider .projectSliderList .projectSliderItem .projectSliderContent h2 {
+    font-size: 100px;
+    margin: 0;
+  }
+  
+  .projectSlider .projectSliderList .projectSliderItem.active {
+    opacity: 1;
+    z-index: 10;
+  }
+  
+  @keyframes showContent {
+    to{
+      transform: translateY(0);
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+  
+  .projectSlider .projectSliderList .projectSliderItem.active p:nth-child(1),
+  .projectSlider .projectSliderList .projectSliderItem.active h2,
+  .projectSlider .projectSliderList .projectSliderItem.active p:nth-child(3) {
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s .7s ease-in-out 1 forwards;
+  }
+  
+  .projectSlider .projectSliderList .projectSliderItem.active h2 {
+    animation-delay: 1s;
+  }
+  
+  .projectSlider .projectList .projectItem.active p:nth-child(3) {
+    animation-delay: 1.3s;
+  }
+  
+  .projectArrows {
+    position: absolute;
+    top: 65%;
+    right: 85px;
+    z-index: 100;
+    /* pa */
+  }
+  
+  .projectArrows button {
+    background-color: #eee5;
+    border: none;
+    font-family: monospace;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: x-large;
+    color: #eee;
+    transition: .5s;
+  }
+  
+  .projectArrows button:hover {
+    background-color: #eee;
+    color: #000;
+  }
+  
+  .projectThumbmail {
+    position: absolute;
+    bottom: -50px;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 250px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    justify-content: center;
+    /* animation: marquee1 30s linear infinite; */
+  }
+
+  @keyframes marquee1 {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-250px * 12));
+    }
+  }
+  
+  .projectThumbmail::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  .projectThumbmail .projectThumbmailItem {
+    width: 220px;
+    height: 150px;
+    filter: brightness(.5);
+    transition: .5s;
+    flex-shrink: 0;
+  }
+  
+  .projectThumbmail .projectThumbmailItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .projectThumbmail .projectThumbmailItem:hover {
+    filter: brightness(1);
+  }
+  
+  .projectThumbmail .projectThumbmailItem.active {
+    filter: brightness(1.5);
+  }
+  
+  .projectThumbmail .projectThumbmailItem .projectThumbmailContent {
+    position: absolute;
+    inset: auto 10px 10px 10px;
+  }
+  
+  @media screen and (max-width: 678px){
+    .projectThumbmail {
+      justify-self: start;
+    }
+    .projectSlider .projectList .projectItem .projectContent h2 {
+      font-size: 60px;
+    }
+    .projectArrows {
+      top: 10%;
+    }
+  }
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Project Slider v2 */
+
+
+
