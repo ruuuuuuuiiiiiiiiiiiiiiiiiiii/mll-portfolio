@@ -10,10 +10,12 @@ import ionic from "../images/technology/icons8-ionic-100.png";
 import java from "../images/technology/icons8-java-100.png";
 import javascript from "../images/technology/icons8-javascript-100.png";
 import jwt from "../images/technology/icons8-json-web-token-100.png";
+import kubernetes from "../images/technology/icons8-kubernetes-100.png";
 import mui from "../images/technology/icons8-material-ui-100.png";
 import mongodb from "../images/technology/icons8-mongodb-100.png";
 import mysql from "../images/technology/icons8-mysql-logo-100.png";
 import nodejs from "../images/technology/icons8-nodejs-100.png";
+import postgres from "../images/technology/icons8-postgres-100.png";
 import postman from "../images/technology/icons8-postman-is-the-only-complete-api-development-environment-100.png";
 import react from "../images/technology/icons8-react-native-100.png";
 import redux from "../images/technology/icons8-redux-100.png";
@@ -73,6 +75,10 @@ const image = [
     imgData: jwt,
   },
   {
+    altName: 'K8S', 
+    imgData: kubernetes,
+  },
+  {
     altName: 'MUI', 
     imgData: mui,
   },
@@ -91,6 +97,10 @@ const image = [
   {
     altName: 'Postman', 
     imgData: postman,
+  },
+  {
+    altName: 'Postgres', 
+    imgData: postgres,
   },
   {
     altName: 'React', 
