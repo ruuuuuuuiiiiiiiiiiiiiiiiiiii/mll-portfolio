@@ -36,7 +36,7 @@ const Slider = () => {
             {technologyImages.map((technologyImage) => {
                 return(
                     <motion.div className="item" key={technologyImage.imgData}>
-                        <img classname="itemImage" src={technologyImage.imgData} alt={technologyImage.altName} />
+                        <img src={technologyImage.imgData} alt={technologyImage.altName} />
                         <span className="imgToolTilText">{technologyImage.altName}</span>
                     </motion.div>
                     
